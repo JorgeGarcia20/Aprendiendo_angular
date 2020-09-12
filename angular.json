@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "aprendiendo-angular"
+    }
+  },
+  "defaultProject": "aprendiendo-angular",
+  "cli": {
+    "analytics": "d70b094c-6173-499c-a3d3-3df49b2f9713"
+  }
 }

@@ -1,0 +1,40 @@
+<h1>{{title}}</h1>
+<h2>Shoes</h2>
+
+<ul>
+  <li *ngFor="let marca of marcas">{{marca}}</li>
+</ul>
+
+<p>Los mas usados son: </p>
+<ul>
+  <!--Si el stok de los shoes es falso tachara el nombre-->
+  <li *ngFor="let index of shoes">
+    <span [ngStyle]="{
+      'text-decoration':!index.stok ? 'line-through':'none'
+    }">
+      {{index.nombre}} - <strong>{{index.precio }} $ </strong>
+    </span>
+
+    <span *ngIf="index.precio <= 80" [style.background]="index.precio <= 80 ? 'green': 'transparent'"
+      [style.color]="index.precio <= 80 ? 'white': 'black'">
+      !EN OFERTA¡
+    </span>
+  </li>
+</ul>
+
+<p>El color de la mayoria de los zapatos es: </p>
+
+<ul [ngSwitch]="color">
+  <li *ngSwitchCase="'yellow'">
+    El color predominante es el <span [ngStyle]="{'background':color}">Amarillo</span>
+  </li>
+  <li *ngSwitchCase="'red'">
+    El color predominante es el <span [ngStyle]="{'background':color}">Rojo</span>
+  </li>
+  <li *ngSwitchCase="'blue'">
+    El color predominante es el <span [ngStyle]="{'background':color}">Azul</span>
+  </li>
+  <li *ngSwitchCase="'orange'">
+    El color predominante es el <span [ngStyle]="{'background':color}">Naranja</span>
+  </li>
+</ul>
