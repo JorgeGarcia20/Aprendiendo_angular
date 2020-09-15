@@ -1,6 +1,16 @@
 <h1>{{title}}</h1>
 <h2>Shoes</h2>
 
+<p>Añadir marca</p>
+
+<!--Data binding-->
+<input type="text" [(ngModel)]='mi_marca'>
+<button (click)="getMarca()">Mostrar marca</button>
+<button (click)="addMarca()">Agregar marca</button>
+<br>
+<p>{{mi_marca}}</p>
+
+<br>
 <ul>
   <li *ngFor="let marca of marcas">{{marca}}</li>
 </ul>
@@ -23,6 +33,9 @@
 </ul>
 
 <p>El color de la mayoria de los zapatos es: </p>
+
+<!--Data binding-->
+<input type="text" [(ngModel)]="color">
 
 <ul [ngSwitch]="color">
   <li *ngSwitchCase="'yellow'">

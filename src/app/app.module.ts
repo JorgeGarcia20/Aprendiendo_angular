@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { FormsModule } from '@angular/forms'; //importacion necesaria para el uso de data binding
 
 //new component
 import { VideogamesComponent } from './videogames/videogame.component';
@@ -19,7 +20,8 @@ import { CursosComponent } from './cursos/cursos.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

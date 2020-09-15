@@ -12,6 +12,7 @@ export class ShoesComponent implements OnInit {
   public shoes: Array<Shoe>;
   public marcas: String[];
   public color: string;
+  public mi_marca: string;
 
   constructor() {
     this.color = 'yellow';
@@ -41,6 +42,15 @@ export class ShoesComponent implements OnInit {
       }
     });
     console.log(this.marcas);
+  }
+
+  //metodos de ejemplo para usar el data binding
+  getMarca() {
+    alert(this.mi_marca);
+  }
+
+  addMarca() {
+    this.marcas.push(this.mi_marca);
   }
 
 }
