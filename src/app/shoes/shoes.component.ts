@@ -57,4 +57,12 @@ export class ShoesComponent implements OnInit {
     this.marcas.splice(index, 1);
   }
 
+  onBlur() {
+    console.log('Has salido del input');
+  }
+
+  getTecla() {
+    alert(this.mi_marca);
+  }
+
 }
