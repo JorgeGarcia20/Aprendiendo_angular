@@ -53,4 +53,8 @@ export class ShoesComponent implements OnInit {
     this.marcas.push(this.mi_marca);
   }
 
+  borrarMarca(index) {
+    this.marcas.splice(index, 1);
+  }
+
 }
