@@ -25,7 +25,13 @@
     <span [ngStyle]="{
       'text-decoration':!index.stok ? 'line-through':'none'
     }">
-      {{index.nombre}} - <strong>{{index.precio }} $ </strong>
+      {{index.nombre}} -
+      <strong [ngClass]="{
+          'fondoRojo':index.precio >= 100,
+          'subrayado':index.marca == 'Nike'
+        }">
+        {{index.precio }} $
+      </strong>
     </span>
 
     <span *ngIf="index.precio <= 80" [style.background]="index.precio <= 80 ? 'green': 'transparent'"
