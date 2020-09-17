@@ -20,4 +20,4 @@ const appRoutes: Routes = [
 
 //Exportar el modulo router
 export const appRoutingProviders: any[] = [];
-export const routing: ModuleWithProviders<RouterModule> = RouterModule.forRoot(appRoutes);
+export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);
