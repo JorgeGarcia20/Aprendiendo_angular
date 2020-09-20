@@ -8,6 +8,17 @@
 
   <h1>My project's name is {{ title }} and is running!</h1>
   <h2>{{description}}</h2>
+
+  <nav>
+    <a [routerLink]="['/home']" [routerLinkActive]="['active']">Home</a>
+    &nbsp;
+    <a [routerLink]="['/shoes']" [routerLinkActive]="['active']">Shoes</a>
+    &nbsp;
+    <a [routerLink]="['/cursos']" [routerLinkActive]="['active']">Cursos</a>
+    &nbsp;
+    <a [routerLink]="['/videogame']" [routerLinkActive]="['active']">Videogame</a>
+  </nav>
+
   <!--
   <h1>Pasos para generar un nuevo componente</h1>
   <ul>
@@ -35,8 +46,3 @@
   <router-outlet></router-outlet>
 
 </div>
-
-
-
-
-<router-outlet></router-outlet>

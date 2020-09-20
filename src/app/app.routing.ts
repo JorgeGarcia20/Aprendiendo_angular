@@ -7,17 +7,20 @@ import { VideogamesComponent } from './videogames/videogame.component';
 import { ShoesComponent } from './shoes/shoes.component';
 import { CursosComponent } from './cursos/cursos.component';
 import { HomeComponent } from './home/home.component';
+import { Route } from '@angular/compiler/src/core';
 
 //Array de rutas
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'Shoes', component: ShoesComponent },
-  { path: 'Videogames', component: VideogamesComponent },
-  { path: 'Cursos', component: CursosComponent },
+  { path: 'shoes', component: ShoesComponent },
+  { path: 'videogames', component: VideogamesComponent },
+  { path: 'cursos', component: CursosComponent },
+  { path: 'cursos/:nombre/:followers', component: CursosComponent },
+
   { path: '**', component: HomeComponent }
 ];
 
 
 //Exportar el modulo router
 export const appRoutingProviders: any[] = [];
-export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);
+export const routing: ModuleWithProviders<Route> = RouterModule.forRoot(appRoutes);

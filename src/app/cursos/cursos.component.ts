@@ -1,4 +1,5 @@
-import { Component, OnInit, DoCheck } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute, Params } from '@angular/router';
 
 @Component({
   selector: 'cursos',
@@ -6,17 +7,30 @@ import { Component, OnInit, DoCheck } from '@angular/core';
   styleUrls: ['./cursos.component.css']
 })
 
-export class CursosComponent implements OnInit, DoCheck {
+export class CursosComponent implements OnInit {
   public title = "I'm taking two courses, they are";
-  constructor() {
-    //console.log('Cursos component is working!');
+  public nombre: string;
+  public followers: number;
+
+  constructor(
+    private _route: ActivatedRoute,
+    private _router: Router
+  ) { }
+
+  ngOnInit() {
+    this._route.params.subscribe((params: Params) => {
+      this.nombre = params.nombre;
+      this.followers = +params.followers;
+
+      console.log(params);
+
+      if (this.nombre == 'ninguno') {
+        this._router.navigate(['/home'])
+      }
+    })
   }
 
-  ngOnInit(): void {
+  redirigir() {
+    this._router.navigate(['/shoes']);
   }
-
-  ngDoCheck() {
-
-  }
-
 }
