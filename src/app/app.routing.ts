@@ -16,7 +16,6 @@ const appRoutes: Routes = [
   { path: 'videogames', component: VideogamesComponent },
   { path: 'cursos', component: CursosComponent },
   { path: 'cursos/:nombre/:followers', component: CursosComponent },
-
   { path: '**', component: HomeComponent }
 ];
 
