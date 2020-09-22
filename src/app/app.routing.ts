@@ -8,6 +8,7 @@ import { ShoesComponent } from './shoes/shoes.component';
 import { CursosComponent } from './cursos/cursos.component';
 import { HomeComponent } from './home/home.component';
 import { Route } from '@angular/compiler/src/core';
+import { ExternoComponent } from './externo/externo.component'
 
 //Array de rutas
 const appRoutes: Routes = [
@@ -16,6 +17,7 @@ const appRoutes: Routes = [
   { path: 'videogames', component: VideogamesComponent },
   { path: 'cursos', component: CursosComponent },
   { path: 'cursos/:nombre/:followers', component: CursosComponent },
+  { path: 'externo', component: ExternoComponent },
   { path: '**', component: HomeComponent }
 ];
 
