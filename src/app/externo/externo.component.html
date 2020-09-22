@@ -1,7 +1,10 @@
 <hr>
+<input type="text" [(ngModel)]="userId" (keyup.enter)="cargaUsuario()">
+<br>
+<div *ngIf="!user">
+  cargando....
+</div>
 <div *ngIf="user">
-  <input type="text" [(ngModel)]="userId" (keyup.enter)="cargaUsuario()">
-  <br>
   <img src="{{user.avatar}}" alt="">
   <h2>{{user.first_name + ' ' + user.last_name}}</h2>
   <h2>{{user.email}}</h2>

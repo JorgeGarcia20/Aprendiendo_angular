@@ -21,6 +21,7 @@ export class ExternoComponent implements OnInit {
     this.cargaUsuario()
   }
   cargaUsuario() {
+    this.user = false;
     this._peticionesServices.getUser(this.userId).subscribe(
       result => {
         this.user = result.data;
