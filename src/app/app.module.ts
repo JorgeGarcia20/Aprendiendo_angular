@@ -12,6 +12,7 @@ import { CursosComponent } from './cursos/cursos.component';
 import { HomeComponent } from './home/home.component';
 import { from } from 'rxjs';
 import { ExternoComponent } from './externo/externo.component';
+import { CalculadoraPipe } from './pipes/calculadora.pipe';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ExternoComponent } from './externo/externo.component';
     ShoesComponent,
     CursosComponent,
     HomeComponent,
-    ExternoComponent
+    ExternoComponent,
+    CalculadoraPipe,
   ],
   imports: [
     BrowserModule,

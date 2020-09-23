@@ -1,4 +1,11 @@
 <hr>
+{{fecha| date:'dd//MM//yy'}}
+<br>
+{{fecha| date: 'fullDate' | uppercase}}
+<br>
+{{'HOLA MUNDO DESDE UNA PIPE' | lowercase}}
+<hr>
+
 <input type="text" [(ngModel)]="userId" (keyup.enter)="cargaUsuario()">
 <br>
 <div *ngIf="!user">
@@ -9,3 +16,6 @@
   <h2>{{user.first_name + ' ' + user.last_name}}</h2>
   <h2>{{user.email}}</h2>
 </div>
+
+<h2>pipe calculadora</h2>
+<h3>{{50 | calculadora: 90}}</h3>
