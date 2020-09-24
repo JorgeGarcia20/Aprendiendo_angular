@@ -1,6 +1,6 @@
 <h2>Contacto</h2>
 
-<form #formContacto="ngForm" (ngSubmit)="onSubmit()">
+<form #formContacto="ngForm" (ngSubmit)="onSubmit(formContacto)">
   <label for="nombre">Nombre</label> <br>
   <input type="text" name="nombre" #nombre="ngModel" [(ngModel)]="usuario.nombre" required pattern="[a-zA-Z]+">
   <span *ngIf="nombre.touched && !nombre.valid">
@@ -29,5 +29,5 @@
   </span>
   <br>
 
-  <input type="submit" value="Enviar"><br>
+  <input type="submit" value="Enviar" [disabled]="!formContacto.form.valid"><br>
 </form>
